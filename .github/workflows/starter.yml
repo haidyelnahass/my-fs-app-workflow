@@ -34,14 +34,18 @@ jobs:
         run: |
           cd backend
           npm install
-          
+
       # Run the tests.
       - name: Run tests
-        run: npm test
+        run: |
+          cd backend
+          npm test
 
       # Run the linter.
       - name: Run linter
-        run: npm run lint
+        run: |
+          cd backend
+          npm run lint
 
       # Send a console message at completion.
       - run: |
